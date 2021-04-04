@@ -34,3 +34,7 @@ one_hot_encoded_test_X = pd.get_dummies(test_X)
 
 Categoricals with many values: Scikit-learn's FeatureHasher uses the hashing trick to store high-dimensional data. 
 This will add some complexity to your modeling code
+
+
+If using regression trees, converting categorical variables to continuous might not be necessary at all. 
+Regression trees can take categorical values as inputs -- all that is needed is to define a splitting logic at a give node. 
