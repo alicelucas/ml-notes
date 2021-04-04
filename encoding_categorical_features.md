@@ -1,13 +1,14 @@
 Ordinal encoding is not recommended for most classifiers, because these encoding might be interpreted as being ordered, so higher numbers will be weighed more in the loss. We don't want that! It's best to use one-hot encoding, also called dummy encoding. 
 
 Convert categorical to one-hot encoding:
-[PANDAS]
 ```
+# Pandas
 one_hot_encoded_test_X = pd.get_dummies(test_X)
 one_hot_encoded_train_X = pd.get_dummies(train_X)
 ```
-[SKLEARN]
+
 ```
+# Sklearn
 enc = preprocessing.OneHotEncoder()
 enc.transform(train_X).toarray()
 enc.fit(train_X)
@@ -18,8 +19,8 @@ Note that a nice advantage of using regression trees is that it is not needed to
 
 Notes on level of cardiality:
 You could choose to keep only categorical inputs that have a low level of cardinality, but that's a bit arbitrary. 
-[PANDAS] 
 ```
+# Pandas
 low_cardinality_cols = [cname for cname in candidate_train_predictors.columns if 
                                 candidate_train_predictors[cname].nunique() < 10 and
                                 candidate_train_predictors[cname].dtype == "object"]
