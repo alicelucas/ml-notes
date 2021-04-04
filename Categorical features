@@ -1,18 +1,3 @@
-Reading csv file:
---> train_data = pd.read_csv(filename)
-
-Removing missing values with pandas: 
---> train_data.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
---> if you'd like to look at a column (e.g. your target column), specify a subset argument.
-
-Identify any missing columns:
---> cols_with_missing = [col for col in train_data.columns 
-                                 if train_data[col].isnull().any()] 
---> You can now drop any column you'd like, for example:  train_data.drop(['Id'] + cols_with_missing, axis=1) 
-
-
-Removing label column from data to obtain train data:
---> train_X = train_data.drop(['targetCol'], axis=1)
 
 Only using continuous inputs or inputs with low levels of cardinality:
 # "cardinality" means the number of unique values in a column.
