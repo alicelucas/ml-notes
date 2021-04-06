@@ -14,4 +14,8 @@ cols_with_missing = [col for col in train_data.columns
 ```
 You can now drop any column you'd like, for example:  `train_data.drop(['Id'] + cols_with_missing, axis=1)`
 
-However, a problem with that is that you might be losing valuable data points. It's usually better to impute missing data, i.e., by inferring it from the rest of the data. There exists two types of imputation: univariate and multivariate. In the univariate case, we look along the missing i-th feature column to estimate the missing value. In the multivariate case, we use the entire set of available features to compute the missing value. 
+However, a problem with that is that you might be losing valuable data points. It's usually better to impute missing data, i.e., by inferring it from the rest of the data. There exists two types of imputation: univariate and multivariate. 
+
+In the univariate case, we look along the missing i-th feature column to estimate the missing value. Use `sklearn.impute`'s `SimpleImputer()` class with either the `mean`, `constant`, or `most_frequent` strategy. 
+
+In the multivariate case, we use the entire set of available features to compute the missing value. In this case use `sklearn.impute`'s `IterataiveImputer()` class, which is going to model each feature as a function of other features. 
