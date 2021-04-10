@@ -1,3 +1,5 @@
+## Missing values
+
 Missing values are often written as blanks, NaNs, None, or other. What do we do with those?
 
 ##### Detecting missing values 
