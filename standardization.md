@@ -34,5 +34,7 @@ This is preferable in several cases, including:
  
  `MinMaxScaler()` will scale the data to the `[0, 1]` range. `MaxAbsScaler()` assumes that the data is centered around 0, and will scale the data to the [-1, 1] range. The `MaxAbsScaler` scaler is the recommended scaler to use for sparse data because it will not destroy the sparseness structure of the original data.
  
+  #### Use `RobustScaler()` when standardizing with outliers in data
   
+  If your data contains outliers, then look into `sklearn`'s `RobustScaler()` instead. It will use more robust estimate for the center and range of the data.
 
