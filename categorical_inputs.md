@@ -9,3 +9,7 @@ There seems to be two school of thoughts when it comes to one-hot encoding. Give
 
 If categorical variables are to be mixed with continuous inputs, make sure to read `mixed_inputs.md`.
 
+
+#### One-hot encoding
+
+//TODO: make sure to read about non-regularized regression, co-linearity causing non-invertible covariance matrices --> need to drop a category for a one-hot encoded categorical feature. Note that this applies only if not regularizing the learning problem. 
