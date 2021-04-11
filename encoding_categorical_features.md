@@ -1,3 +1,5 @@
+Unordered categorical variables should always be converted to one-hot encoded variables. 
+
 Ordinal encoding is not recommended for most classifiers, because these encoding might be interpreted as being ordered, so higher numbers will be weighed more in the loss. We don't want that! It's best to use one-hot encoding, also called dummy encoding. 
 
 Convert categorical to one-hot encoding:

@@ -1,0 +1,1 @@
+In neural networks, it is recommended that binary inputs (value 0 or 1) be converted to (-1, 1) This is called "effect coding" instead of "dummy coding".
