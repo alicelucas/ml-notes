@@ -25,7 +25,7 @@ enc = preprocessing.OneHotEncoder()
 enc.transform(train_X)
 ```
 
-For non-regularized regression, co-linearity can be a problem as it may cause non-invertible covariance matrices. You can add a `drop="first"` or `drop="if_bibary"` to the arguments of `OneHotEncoder` to drop a category. Note that this applies only if the regression problem is not regularized. 
+For non-regularized regression and in some learning models, co-linearity can be a problem as it may cause non-invertible covariance matrices. This will be the case for example if you use linear regression or GLMs using maximum likelihood. In such cases you can add a `drop="first"` or `drop="if_bibary"` to the arguments of `OneHotEncoder` to drop a category. Note that this applies only if the regression problem is not regularized. 
 
 #### Effect coding
 
