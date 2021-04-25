@@ -35,3 +35,10 @@ Represent the features as multiple boolean features. If the categories are (fema
 #### Regression trees and random forests
 Note that a nice advantage of using regression trees is that it is not needed to convert categorical variables. All that is needed is to define a splitting logic at a given node. 
 
+
+
+#### Ordinal data
+
+Imagine that you have a feature that is a number of something, e.g. a number of siblings on the Titanic boat. There are two approaches:
+- you could treat the feature as continuous, and in this case see `continuous_inputs.md`. 
+- or you could treat the features as categorical, in which case you would encode them for example with one-hot encoding. Note however that this would ignore the ordered nature of the variable. 
