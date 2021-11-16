@@ -15,7 +15,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 X_train.shape, X_test.shape
 ```
 
-The feature engineering steps will be done on these matrices (not on the pandas `data`).
+The feature engineering steps will be done on these pandas array (not on the original pandas `data`).
 
 
 When you apply a feature engineering step, always use stats from the `X_train` dataset

@@ -1,3 +1,5 @@
+Assuming a pandas array was obtained: `` data = pd.read_csv()``. Visualize with `data.head()`
+
 #### Prepare dataset 
 
 The examples below are from the Titanic dataset. 
